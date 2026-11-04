@@ -213,8 +213,8 @@ picture{display:contents}
   *{transition:none!important;animation:none!important}
 }
 </style>
-<!-- FILL: JSON-LD still needs: openingHoursSpecification for each open day (hours), geo coordinates of the verified listing, the TikTok link in sameAs, priceRange from lowest to highest price once beard sculpting and the Dapper Set have prices, and url once the final domain is live. -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Dapper Beard Barber Shop","image":"images/storefront-800.jpg","logo":"images/icon-180.png","slogan":"Cut With Intention.","telephone":"+639925600499","email":"dapper.beard.cwi@gmail.com","address":{"@type":"PostalAddress","streetAddress":"24A Mayor Gil Fernando Ave, San Roque","addressLocality":"Marikina City","addressRegion":"Metro Manila","postalCode":"1801","addressCountry":"PH"},"priceRange":"₱300","sameAs":["https://www.facebook.com/profile.php?id=61566796442975","https://www.instagram.com/dapperbeard.cwi/"]}</script>
+<!-- FILL: JSON-LD still needs: geo coordinates of the verified listing, the TikTok link in sameAs, and url once the final domain is live. Recheck priceRange once the Dapper Set has a price. -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Dapper Beard Barber Shop","image":"images/storefront-800.jpg","logo":"images/icon-180.png","slogan":"Cut With Intention.","telephone":"+639925600499","email":"dapper.beard.cwi@gmail.com","address":{"@type":"PostalAddress","streetAddress":"24A Mayor Gil Fernando Ave, San Roque","addressLocality":"Marikina City","addressRegion":"Metro Manila","postalCode":"1801","addressCountry":"PH"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"21:00"}],"priceRange":"₱100–₱850","sameAs":["https://www.facebook.com/profile.php?id=61566796442975","https://www.instagram.com/dapperbeard.cwi/"]}</script>
 <script src="script.js" defer></script>
 </head>
 <body>
@@ -326,8 +326,27 @@ picture{display:contents}
 <span class="price-dots" aria-hidden="true" data-reveal="line" data-delay="350"></span>
 <span class="price-amount">₱<span data-count="300">300</span></span>
 </div>
-<!-- FILL: beard sculpting price. New row copying the Haircut row's markup and styling. -->
+<div class="price-row" data-reveal="up" data-delay="120">
+<span class="price-name">Beard sculpting</span>
+<span class="price-dots" aria-hidden="true" data-reveal="line" data-delay="350"></span>
+<span class="price-amount">₱<span data-count="350">350</span></span>
+</div>
 <!-- FILL: Dapper Set (haircut + beard sculpting) price. New row copying the Haircut row's markup and styling. -->
+<div class="price-row" data-reveal="up" data-delay="120">
+<span class="price-name">Face shave</span>
+<span class="price-dots" aria-hidden="true" data-reveal="line" data-delay="350"></span>
+<span class="price-amount">₱<span data-count="300">300</span></span>
+</div>
+<div class="price-row" data-reveal="up" data-delay="120">
+<span class="price-name">Hair wash</span>
+<span class="price-dots" aria-hidden="true" data-reveal="line" data-delay="350"></span>
+<span class="price-amount">₱<span data-count="100">100</span></span>
+</div>
+<div class="price-row" data-reveal="up" data-delay="120">
+<span class="price-name">Haircut with hair dye</span>
+<span class="price-dots" aria-hidden="true" data-reveal="line" data-delay="350"></span>
+<span class="price-amount">₱<span data-count="850">850</span></span>
+</div>
 </div>
 </div>
 </section>
@@ -339,7 +358,7 @@ picture{display:contents}
 <span class="sec-num">03</span>
 </div>
 <div class="visit-hours">
-<!-- FILL: daily opening hours. Opening and closing time for each open day; keep "Closed Tuesdays". -->
+<span>Open Wednesday to Monday, 10 AM–9 PM</span>
 <span>Closed Tuesdays</span>
 </div>
 <div class="visit-address">
