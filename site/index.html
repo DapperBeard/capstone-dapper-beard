@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dapper Beard Barber Shop | Barbershop in Marikina</title>
+<meta name="description" content="Dapper Beard Barber Shop in Marikina: ₱300 haircuts and beard sculpting in an air-conditioned shop beside Pasta Box. Walk-ins welcome.">
+<!-- FILL: final domain. Once the live address is known, add <link rel="canonical"> and og:url, and make og:image absolute (handoff/02-deploy.md). -->
+<meta property="og:title" content="Dapper Beard Barber Shop | Barbershop in Marikina">
+<meta property="og:description" content="Dapper Beard Barber Shop in Marikina: ₱300 haircuts and beard sculpting in an air-conditioned shop beside Pasta Box. Walk-ins welcome.">
+<meta property="og:image" content="images/storefront-800.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#151515">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icon-32.png">
+<link rel="apple-touch-icon" href="images/icon-180.png">
+<link rel="preload" href="fonts/familjen-grotesk-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Dapper Beard Barber Shop. Rebuilt from design/Dapper-Beard.dc.html (frame: Responsive).
+   Fonts: Familjen Grotesk, IBM Plex Sans and IBM Plex Mono from Google Fonts, self-hosted and subset (₱ U+20B1 kept). */
+@font-face{font-family:'Familjen Grotesk';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/familjen-grotesk-600.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/ibm-plex-sans-400.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/ibm-plex-sans-500.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/ibm-plex-sans-600.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/ibm-plex-mono-400.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/ibm-plex-mono-500.woff2) format('woff2')}
+
+body{margin:0;background:#F6F6F4;color:#151515;-webkit-font-smoothing:antialiased}
+a{color:#3D5A73}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid #3D5A73;outline-offset:3px}
+picture{display:contents}
+
+@keyframes db-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes db-pole{from{background-position:0 0}to{background-position:0 40px}}
+@keyframes db-pulse{0%{box-shadow:0 0 0 0 rgba(122,200,140,.7)}70%{box-shadow:0 0 0 10px rgba(122,200,140,0)}100%{box-shadow:0 0 0 0 rgba(122,200,140,0)}}
+@keyframes db-cue{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(6px);opacity:1}}
+
+.page{position:relative;font-family:'IBM Plex Sans',sans-serif;color:#151515;background:#F6F6F4;container-type:inline-size;overflow-x:clip}
+
+/* Top bar */
+.bar{position:sticky;top:0;z-index:20;height:64px;margin-bottom:-64px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 20px;background:rgba(246,246,244,0);border-bottom:1px solid transparent;transition:background .35s,border-color .35s}
+.bar.is-scrolled{background:rgba(246,246,244,.88);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom-color:rgba(21,21,21,.1)}
+.bar-logo{display:block;width:38px;line-height:0}
+.bar-logo img{width:100%;height:auto;display:block;transition:filter .35s}
+.bar.is-scrolled .bar-logo img{filter:invert(1)}
+.nav{display:none;gap:6px;margin-left:auto}
+.nav a{position:relative;display:flex;align-items:center;min-height:44px;padding:0 14px;color:#F6F6F4;opacity:.75;font-weight:500;font-size:15px;text-decoration:none;transition:color .35s,opacity .2s}
+.nav a:hover,.nav a[aria-current]{opacity:1}
+.nav a span{position:absolute;left:14px;right:14px;bottom:8px;height:2px;background:currentColor;transform:scaleX(0);transform-origin:left center;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.nav a[aria-current] span{transform:scaleX(1)}
+.bar.is-scrolled .nav a{color:#151515}
+.bar-msg{position:relative;display:flex;align-items:center;min-height:40px;padding:0 18px;border-radius:999px;background:rgba(246,246,244,.16);color:#F6F6F4;font-weight:600;font-size:14px;text-decoration:none;transition:background .35s,color .35s,transform .15s}
+.bar-msg::before{content:"";position:absolute;inset:-2px 0}
+.bar-msg:hover{transform:translateY(-1px)}
+.bar-msg:active{transform:scale(.96)}
+.bar.is-scrolled .bar-msg{background:#151515}
+.bar-progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:#151515;transform:scaleX(0);transform-origin:left center;opacity:0;transition:opacity .35s}
+.bar.is-scrolled .bar-progress{opacity:1}
+
+/* Opening screen */
+.hero{position:relative;min-height:min(88vh,820px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#151515;color:#F6F6F4}
+.hero-media{position:absolute;inset:-8% 0 0 0;will-change:transform}
+.hero-media img{width:100%;height:100%;object-fit:cover;display:block;transform-origin:60% 40%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,15,15,.55) 0%,rgba(15,15,15,.15) 30%,rgba(15,15,15,.6) 62%,rgba(15,15,15,.94) 100%)}
+.hero-body{position:relative;max-width:1200px;width:100%;margin:0 auto;box-sizing:border-box;padding:120px 24px 40px;display:flex;flex-direction:column;gap:18px}
+.hero-logo{width:min(300px,72%);overflow:hidden;line-height:0}
+.hero-logo img{width:100%;height:auto;display:block;filter:invert(1)}
+.hero-tag{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#D9D6D0}
+.hero h1{margin:0;font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:clamp(36px,8.5cqi,96px);line-height:.98;letter-spacing:-0.03em;max-width:11em;text-wrap:balance}
+.hero-lede{margin:0;font-size:17px;line-height:1.5;color:#D9D6D0;max-width:30em;text-wrap:pretty}
+.hero-status{display:flex;align-items:center;gap:12px;font-size:15px}
+.pole{width:10px;height:26px;flex:none;border-radius:5px;border:1.5px solid #F6F6F4;box-sizing:border-box;background:repeating-linear-gradient(135deg,#B8302A 0 5px,#F6F6F4 5px 10px,#2F4C86 10px 15px,#F6F6F4 15px 20px);background-size:100% 40px;animation:db-pole 1.6s linear infinite}
+.pill{display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(246,246,244,.12);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.pill-dot{width:8px;height:8px;border-radius:50%;background:#8A8780}
+.pill.is-open .pill-dot{background:#7AC88C;animation:db-pulse 2s infinite}
+.pill.is-closed .pill-dot{background:#E0705F}
+.pill-text{font-weight:500}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;padding-top:6px}
+.btn-light,.btn-ghost{display:flex;align-items:center;justify-content:center;min-height:54px;padding:0 22px;font-size:16px;text-decoration:none;border-radius:2px;transition:transform .15s,background .2s}
+.btn-light{flex:1 1 200px;background:#F6F6F4;color:#151515;font-weight:600}
+.btn-light:hover{background:#FFFFFF}
+.btn-ghost{flex:1 1 140px;border:1px solid rgba(246,246,244,.7);color:#F6F6F4;font-weight:500}
+.btn-ghost:hover{background:rgba(246,246,244,.12)}
+.btn-light:active,.btn-ghost:active{transform:scale(.97)}
+.hero-cue{display:flex;justify-content:center;padding-top:8px}
+.hero-cue span{width:2px;height:22px;border-radius:1px;background:#F6F6F4;animation:db-cue 1.8s ease-in-out infinite}
+.walkin{display:none;position:absolute;right:max(24px,calc((100% - 1152px) / 2));bottom:48px;width:280px;padding:22px 22px 20px;box-sizing:border-box;background:rgba(21,21,21,.55);-webkit-backdrop-filter:blur(16px) saturate(1.3);backdrop-filter:blur(16px) saturate(1.3);border:1px solid rgba(246,246,244,.18);flex-direction:column;gap:14px}
+.walkin-label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#B8B4AD}
+.walkin-row{display:flex;align-items:baseline;gap:10px}
+.walkin-name{font-size:17px;font-weight:500}
+.walkin-dots{flex:1;border-bottom:2px dotted rgba(246,246,244,.35);transform:translateY(-5px)}
+.walkin-price{font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:34px;letter-spacing:-0.02em}
+.walkin-note{font-size:14px;line-height:1.45;color:#D9D6D0}
+
+/* Marquee */
+.marquee{background:#151515;color:#F6F6F4;border-top:1px solid #2A2927;overflow:hidden;padding:14px 0}
+.marquee-track{display:flex;width:max-content;animation:db-marquee 32s linear infinite}
+.marquee-loop{display:flex;gap:28px;padding-right:28px;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.marquee .star{color:#8A8780}
+
+/* Shared section heads */
+.sec-head,.sec-head-dark,.sec-head-plain{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.work h2,.visit h2{margin:0;font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:clamp(28px,7cqi,40px);letter-spacing:-0.02em}
+.sec-num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5E5A54}
+
+/* Recent work */
+.work{max-width:1200px;margin:0 auto;padding:52px 0 56px;display:flex;flex-direction:column;gap:18px}
+.work .sec-head{padding:0 24px}
+.work-grid{padding:0 24px;display:flex;flex-wrap:wrap;gap:8px}
+.ba{flex:2 1 400px;aspect-ratio:4/5;position:relative;overflow:hidden;border-radius:4px;background:#151515;-webkit-user-select:none;user-select:none;touch-action:pan-y;--ba:50%}
+.ba:has(input:focus-visible){outline:3px solid #3D5A73;outline-offset:3px}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ba-before{position:absolute;inset:0;overflow:hidden;clip-path:inset(0 calc(100% - var(--ba)) 0 0)}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--ba);width:2px;margin-left:-1px;background:#F6F6F4;pointer-events:none}
+.ba-handle span{position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:#F6F6F4;color:#151515;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.ba-tag{position:absolute;top:14px;padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;pointer-events:none}
+.ba-tag-before{left:14px;background:rgba(21,21,21,.7);color:#F6F6F4}
+.ba-tag-after{right:14px;background:#F6F6F4;color:#151515}
+.ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.work-pair{flex:2 1 300px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tile,.shop-item{border-radius:4px;overflow:hidden;background:#DADDDE}
+.tile{min-height:320px}
+.tile img,.shop-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.tile img:hover,.shop-item img:hover,.storefront img:hover{transform:scale(1.05)}
+.shop{display:flex;flex-direction:column;gap:14px;padding-top:28px}
+.shop-head{padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.shop-head h3{margin:0;font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:20px}
+.shop-btns{display:flex;gap:8px}
+.shop-btns button{width:44px;height:44px;border-radius:50%;border:1px solid #151515;background:transparent;color:#151515;font-size:16px;cursor:pointer;transition:background .2s,color .2s,transform .15s}
+.shop-btns button:hover{background:#151515;color:#F6F6F4}
+.shop-btns button:active{transform:scale(.94)}
+.shop-track{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 24px;padding:0 24px;scrollbar-width:none}
+.shop-track::-webkit-scrollbar{display:none}
+.shop-item{flex:0 0 min(78%,340px);scroll-snap-align:start;aspect-ratio:4/5}
+.shop-end{flex:0 0 16px}
+
+/* Price list */
+.prices{background:#151515;color:#F6F6F4;padding:60px 24px 56px;overflow:hidden}
+.prices-inner{max-width:1152px;margin:0 auto;display:flex;flex-wrap:wrap;gap:30px 80px;align-items:flex-start}
+.prices-intro{flex:1 1 280px;display:flex;flex-direction:column;gap:18px}
+.prices h2{margin:0;font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:clamp(36px,10cqi,56px);line-height:1;letter-spacing:-0.025em}
+.prices .sec-num{color:#8A8780}
+.prices-intro p{margin:0;font-size:15px;line-height:1.5;color:#B8B4AD}
+.prices-list{flex:1.4 1 340px;display:flex;flex-direction:column;gap:24px;padding-top:8px}
+.price-row{display:flex;align-items:baseline;gap:10px}
+.price-name{font-size:19px;font-weight:500}
+.price-dots{flex:1;border-bottom:2px dotted #5C5A56;transform:translateY(-5px);transform-origin:left center}
+.price-amount{font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:clamp(40px,6cqi,64px);letter-spacing:-0.02em;font-variant-numeric:tabular-nums}
+
+/* Visit and contact */
+.visit{max-width:1200px;margin:0 auto;padding:56px 24px;display:flex;flex-wrap:wrap;gap:28px}
+.visit-info{flex:1 1 300px;display:flex;flex-direction:column;gap:20px}
+.visit-hours{display:flex;flex-direction:column;gap:8px;font-size:16px;max-width:360px}
+.visit-address{display:flex;flex-direction:column;gap:4px;font-size:16px;line-height:1.45}
+.muted{color:#5E5A54}
+.btn-outline{align-self:flex-start;display:flex;align-items:center;gap:10px;min-height:50px;padding:0 20px;border:1px solid #151515;color:#151515;font-weight:600;font-size:15px;text-decoration:none;border-radius:2px;transition:background .25s,color .25s,transform .15s}
+.btn-outline:hover{background:#151515;color:#F6F6F4}
+.btn-outline:active{transform:scale(.97)}
+.contacts{display:flex;flex-direction:column;border-top:1px solid #151515;margin-top:8px}
+.contacts a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:0 4px;border-bottom:1px solid #D4D2CC;color:#151515;text-decoration:none;transition:padding .25s cubic-bezier(.2,.7,.2,1),background .25s}
+.contacts a:hover{padding-left:8px;background:#EAEAE6}
+.c-label{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#5E5A54;flex:none;width:92px}
+.c-value{flex:1;font-size:16px;font-weight:500;overflow-wrap:anywhere}
+.c-email{overflow-wrap:normal;min-width:0}
+.c-arrow{color:#5E5A54}
+.storefront{flex:1.4 1 360px;min-height:300px;position:relative;background:#DADDDE;overflow:hidden}
+.storefront img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+
+/* Message us */
+.cta{position:relative;background:#151515;color:#F6F6F4;overflow:hidden}
+.cta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:.35;display:block}
+.cta-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,21,21,.92) 0%,rgba(21,21,21,.55) 100%)}
+.cta-inner{position:relative;max-width:1152px;margin:0 auto;padding:96px 24px;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px}
+.cta h2{margin:0;font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:clamp(40px,9cqi,104px);line-height:.95;letter-spacing:-0.035em}
+.btn-cta{flex:0 1 320px;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;padding:0 24px;background:#F6F6F4;color:#151515;font-weight:600;font-size:17px;text-decoration:none;border-radius:2px;transition:transform .2s,background .2s}
+.btn-cta:hover{background:#FFFFFF;transform:translateY(-2px)}
+.btn-cta:active{transform:scale(.97)}
+
+/* Footer */
+.foot{padding-bottom:76px}
+.foot-inner{max-width:1200px;margin:0 auto;padding:28px 24px 36px;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.5}
+.foot-logo{width:150px;overflow:hidden;line-height:0}
+.foot-logo img{width:100%;height:auto;display:block}
+.foot-links{display:flex;flex-wrap:wrap;gap:4px 24px}
+.foot-links a{display:flex;align-items:center;min-height:44px}
+
+/* Bottom tab bar (phones) */
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:25;font-family:'IBM Plex Sans',sans-serif;padding:8px 10px max(10px,env(safe-area-inset-bottom));background:rgba(246,246,244,.9);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-top:1px solid rgba(21,21,21,.1)}
+.tabs-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);max-width:520px;margin:0 auto}
+.tabs-ind{position:absolute;top:-8px;left:0;width:25%;height:3px;display:flex;justify-content:center;transition:transform .45s cubic-bezier(.3,1.3,.5,1)}
+.tabs-ind span{width:28px;height:3px;border-radius:0 0 3px 3px;background:#151515}
+.tabs a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:48px;text-decoration:none;color:#6E6A63;font-size:12px;font-weight:600;letter-spacing:.02em;transition:color .25s,transform .15s}
+.tabs a[aria-current]{color:#151515}
+.tabs a:active{transform:scale(.94)}
+.tab-num{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500}
+
+/* Desktop: top nav and the walk-in card replace the tab bar */
+@media (min-width:760px){
+  .bar{padding:0 max(24px,calc((100% - 1152px) / 2))}
+  .nav{display:flex}
+  .hero-body{padding-right:340px}
+  .walkin{display:flex}
+  .foot{padding-bottom:0}
+  .tabs{display:none}
+}
+
+/* Smooth scrolling for the photo carousel */
+@media (prefers-reduced-motion:no-preference){
+  .shop-track{scroll-behavior:smooth}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+</style>
+<!-- FILL: JSON-LD still needs: openingHoursSpecification for each open day (hours), geo coordinates of the verified listing, the TikTok link in sameAs, priceRange from lowest to highest price once beard sculpting and the Dapper Set have prices, and url once the final domain is live. -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Dapper Beard Barber Shop","image":"images/storefront-800.jpg","logo":"images/icon-180.png","slogan":"Cut With Intention.","telephone":"+639925600499","email":"dapper.beard.cwi@gmail.com","address":{"@type":"PostalAddress","streetAddress":"24A Mayor Gil Fernando Ave, San Roque","addressLocality":"Marikina City","addressRegion":"Metro Manila","postalCode":"1801","addressCountry":"PH"},"priceRange":"₱300","sameAs":["https://www.facebook.com/profile.php?id=61566796442975","https://www.instagram.com/dapperbeard.cwi/"]}</script>
+<script src="script.js" defer></script>
+</head>
+<body>
+<div class="page">
+
+<div class="bar">
+<a class="bar-logo" href="#top" aria-label="Dapper Beard Barber Shop, back to top"><img src="images/monogram-white.png" width="128" height="136" alt=""></a>
+<nav class="nav" aria-label="Sections">
+<a href="#work">Work<span aria-hidden="true"></span></a>
+<a href="#prices">Prices<span aria-hidden="true"></span></a>
+<a href="#visit">Visit<span aria-hidden="true"></span></a>
+</nav>
+<a class="bar-msg" href="https://www.facebook.com/profile.php?id=61566796442975">Message</a>
+<span class="bar-progress" aria-hidden="true"></span>
+</div>
+
+<header id="top" class="hero">
+<div class="hero-media">
+<picture><source srcset="images/cutting-800.webp" type="image/webp"><img src="images/cutting-800.jpg" width="800" height="600" fetchpriority="high" alt="Barber cutting a client's hair at Dapper Beard Barber Shop"></picture>
+</div>
+<div class="hero-shade" aria-hidden="true"></div>
+<div class="hero-body">
+<div class="hero-logo" data-reveal="hero" data-delay="100"><img src="images/logo-transparent.png" width="600" height="257" alt="Dapper Beard Barber Shop logo"></div>
+<span class="hero-tag" data-reveal="hero" data-delay="200">Cut With Intention.</span>
+<h1 data-reveal="hero" data-delay="260">Dapper Beard Barber Shop</h1>
+<p class="hero-lede" data-reveal="hero" data-delay="400">An air-conditioned barbershop in Marikina for haircuts and beard sculpting. Walk-ins welcome.</p>
+<div class="hero-status" data-reveal="hero" data-delay="520">
+<span class="pole" aria-hidden="true"></span>
+<span class="pill"><span class="pill-dot"></span><span class="pill-text">Closed Tuesdays</span></span>
+</div>
+<div class="hero-actions" data-reveal="hero" data-delay="640">
+<a class="btn-light" href="https://www.facebook.com/profile.php?id=61566796442975">Message us on Facebook</a>
+<a class="btn-ghost" href="#prices">See prices</a>
+</div>
+<div class="hero-cue" aria-hidden="true" data-reveal="hero" data-delay="900"><span></span></div>
+</div>
+<div class="walkin" data-reveal="hero" data-delay="820">
+<span class="walkin-label">Walk in</span>
+<div class="walkin-row"><span class="walkin-name">Haircut</span><span class="walkin-dots" aria-hidden="true"></span><span class="walkin-price">₱300</span></div>
+<span class="walkin-note">24A Mayor Gil Fernando Ave, San Roque, Marikina. Closed Tuesdays.</span>
+</div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+<div class="marquee-track">
+<div class="marquee-loop"><span>Haircuts</span><span class="star">✦</span><span>Beard sculpting</span><span class="star">✦</span><span>Walk-ins welcome</span><span class="star">✦</span><span>Air-conditioned</span><span class="star">✦</span><span>Marikina City</span><span class="star">✦</span><span>₱300 haircut</span><span class="star">✦</span></div>
+<div class="marquee-loop"><span>Haircuts</span><span class="star">✦</span><span>Beard sculpting</span><span class="star">✦</span><span>Walk-ins welcome</span><span class="star">✦</span><span>Air-conditioned</span><span class="star">✦</span><span>Marikina City</span><span class="star">✦</span><span>₱300 haircut</span><span class="star">✦</span></div>
+</div>
+</div>
+
+<main>
+<section id="work" class="work" data-section="work">
+<div class="sec-head" data-reveal="up">
+<h2>Recent work</h2>
+<span class="sec-num">01</span>
+</div>
+<div class="work-grid">
+<div class="ba" data-reveal="zoom">
+<picture><source srcset="images/ba-after.webp" type="image/webp"><img src="images/ba-after.jpg" width="720" height="900" loading="lazy" alt="After: client with a new cut and blond highlights, side profile"></picture>
+<div class="ba-before">
+<picture><source srcset="images/ba-before.webp" type="image/webp"><img src="images/ba-before.jpg" width="720" height="900" loading="lazy" alt="Before: the same client with long hair, side profile"></picture>
+</div>
+<div class="ba-handle" aria-hidden="true"><span>↔</span></div>
+<span class="ba-tag ba-tag-before" aria-hidden="true">Before</span>
+<span class="ba-tag ba-tag-after" aria-hidden="true">After</span>
+<input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+</div>
+<div class="work-pair">
+<div class="tile" data-reveal="zoom" data-delay="0">
+<picture><source srcset="images/work-3.webp" type="image/webp"><img src="images/work-3.jpg" width="405" height="900" loading="lazy" alt="Fade with a textured top, side profile" style="object-position:center 45%"></picture>
+</div>
+<div class="tile" data-reveal="zoom" data-delay="120">
+<picture><source srcset="images/work-10.webp" type="image/webp"><img src="images/work-10.jpg" width="405" height="900" loading="lazy" alt="Barber with a client after his cut" style="object-position:center 25%"></picture>
+</div>
+</div>
+</div>
+<div class="shop">
+<div class="shop-head" data-reveal="up">
+<h3>In the shop</h3>
+<div class="shop-btns">
+<button type="button" data-shop="prev" aria-label="Previous photos">←</button>
+<button type="button" data-shop="next" aria-label="Next photos">→</button>
+</div>
+</div>
+<div class="shop-track">
+<div class="shop-item" data-reveal="up"><picture><source srcset="images/work-7.webp" type="image/webp"><img src="images/work-7.jpg" width="675" height="900" loading="lazy" alt="Smiling client in the chair, barber giving a thumbs up"></picture></div>
+<div class="shop-item" data-reveal="up"><picture><source srcset="images/work-5.webp" type="image/webp"><img src="images/work-5.jpg" width="675" height="900" loading="lazy" alt="Barber trimming a client’s hair with clippers and comb"></picture></div>
+<div class="shop-item" data-reveal="up"><picture><source srcset="images/work-2.webp" type="image/webp"><img src="images/work-2.jpg" width="900" height="900" loading="lazy" alt="Barber trimming a client’s hairline while another client waits" style="object-position:30% center"></picture></div>
+<div class="shop-item" data-reveal="up"><picture><source srcset="images/work-6.webp" type="image/webp"><img src="images/work-6.jpg" width="675" height="900" loading="lazy" alt="Barber combing and cutting a young client’s hair"></picture></div>
+<div class="shop-item" data-reveal="up"><picture><source srcset="images/work-4.webp" type="image/webp"><img src="images/work-4.jpg" width="675" height="900" loading="lazy" alt="Barber cutting hair while clients wait on the bench"></picture></div>
+<div class="shop-end" aria-hidden="true"></div>
+</div>
+</div>
+</section>
+
+<section id="prices" class="prices" data-section="prices" aria-labelledby="prices-h">
+<div class="prices-inner">
+<div class="prices-intro">
+<div class="sec-head-dark" data-reveal="up">
+<h2 id="prices-h">Price list</h2>
+<span class="sec-num">02</span>
+</div>
+<p data-reveal="up" data-delay="200">Walk-ins only. One barber, so there may be a short wait.</p>
+</div>
+<div class="prices-list">
+<!-- FILL: service durations. Roughly how long each service takes, once the owner confirms. -->
+<div class="price-row" data-reveal="up" data-delay="120">
+<span class="price-name">Haircut</span>
+<span class="price-dots" aria-hidden="true" data-reveal="line" data-delay="350"></span>
+<span class="price-amount">₱<span data-count="300">300</span></span>
+</div>
+<!-- FILL: beard sculpting price. New row copying the Haircut row's markup and styling. -->
+<!-- FILL: Dapper Set (haircut + beard sculpting) price. New row copying the Haircut row's markup and styling. -->
+</div>
+</div>
+</section>
+
+<section id="visit" class="visit" data-section="visit">
+<div class="visit-info" data-reveal="up">
+<div class="sec-head-plain">
+<h2>Visit and contact</h2>
+<span class="sec-num">03</span>
+</div>
+<div class="visit-hours">
+<!-- FILL: daily opening hours. Opening and closing time for each open day; keep "Closed Tuesdays". -->
+<span>Closed Tuesdays</span>
+</div>
+<div class="visit-address">
+<span>24A Mayor Gil Fernando Ave, San Roque, Marikina City, 1801 Metro Manila</span>
+<span class="muted">Beside Pasta Box, under the black awning with the "Dapper Beard Barber Shop" sign</span>
+</div>
+<!-- FILL: map link to the verified Google Business Profile listing. Replace this search link once the listing is verified. -->
+<a class="btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=24A+Mayor+Gil+Fernando+Ave,+San+Roque,+Marikina" target="_blank" rel="noopener">Get directions <span aria-hidden="true">→</span></a>
+<div class="contacts">
+<a href="tel:+639925600499" rel="noopener"><span class="c-label">Phone</span><span class="c-value">0992 560 0499</span><span class="c-arrow" aria-hidden="true">↗</span></a>
+<a href="mailto:dapper.beard.cwi@gmail.com" rel="noopener"><span class="c-label">Email</span><span class="c-value c-email">dapper.beard.cwi<wbr>@gmail.com</span><span class="c-arrow" aria-hidden="true">↗</span></a>
+<a href="https://m.me/61566796442975" target="_blank" rel="noopener"><span class="c-label">Messenger</span><span class="c-value">Dapper Beard - Marikina</span><span class="c-arrow" aria-hidden="true">↗</span></a>
+<a href="https://www.instagram.com/dapperbeard.cwi/" target="_blank" rel="noopener"><span class="c-label">Instagram</span><span class="c-value">@dapperbeard.cwi</span><span class="c-arrow" aria-hidden="true">↗</span></a>
+<a href="https://www.facebook.com/profile.php?id=61566796442975" target="_blank" rel="noopener"><span class="c-label">Facebook</span><span class="c-value">Dapper Beard - Marikina</span><span class="c-arrow" aria-hidden="true">↗</span></a>
+<!-- FILL: TikTok. A row matching the Instagram one, once the account exists. -->
+</div>
+<!-- FILL: Google review link. The design has no review button yet; one could go here, below the contact list, once the group designs it. -->
+</div>
+<div class="storefront" data-reveal="zoom" data-delay="120">
+<picture><source srcset="images/storefront-800.webp" type="image/webp"><img src="images/storefront-800.jpg" width="800" height="600" loading="lazy" alt="Dapper Beard Barber Shop storefront beside Pasta Box"></picture>
+</div>
+</section>
+
+<section class="cta" aria-label="Message us">
+<picture><source srcset="images/work-1.webp" type="image/webp"><img src="images/work-1.jpg" width="900" height="900" loading="lazy" alt=""></picture>
+<div class="cta-shade" aria-hidden="true"></div>
+<div class="cta-inner">
+<h2 data-reveal="up">Walk in.<br>Walk out sharp.</h2>
+<a class="btn-cta" data-reveal="up" data-delay="150" href="https://www.facebook.com/profile.php?id=61566796442975">Message us on Facebook <span aria-hidden="true">→</span></a>
+</div>
+</section>
+</main>
+
+<footer class="foot">
+<div class="foot-inner" data-reveal="fade">
+<div class="foot-logo"><img src="images/logo-transparent.png" width="600" height="257" alt="Dapper Beard Barber Shop" loading="lazy"></div>
+<span>24A Mayor Gil Fernando Ave, San Roque, Marikina City</span>
+<div class="foot-links"><a href="https://www.facebook.com/profile.php?id=61566796442975">Facebook</a><a href="https://www.instagram.com/dapperbeard.cwi/">Instagram</a><a href="tel:+639925600499">0992 560 0499</a><a href="mailto:dapper.beard.cwi@gmail.com">dapper.beard.cwi@gmail.com</a><!-- FILL: TikTok link, matching the Instagram one. --></div>
+</div>
+</footer>
+</div>
+
+<nav class="tabs" aria-label="Sections">
+<div class="tabs-grid">
+<span class="tabs-ind" aria-hidden="true"><span></span></span>
+<a href="#top" aria-current="true"><span class="tab-num">00</span><span>Home</span></a>
+<a href="#work"><span class="tab-num">01</span><span>Work</span></a>
+<a href="#prices"><span class="tab-num">02</span><span>Prices</span></a>
+<a href="#visit"><span class="tab-num">03</span><span>Visit</span></a>
+</div>
+</nav>
+</body>
+</html>

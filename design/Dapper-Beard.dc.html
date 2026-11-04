@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Dapper Beard Barber Shop | Barbershop in Marikina</title>
+<meta name="description" content="Dapper Beard Barber Shop in Marikina: ₱300 haircuts and beard sculpting in an air-conditioned shop beside Pasta Box. Walk-ins welcome.">
+<meta property="og:title" content="Dapper Beard Barber Shop | Barbershop in Marikina">
+<meta property="og:description" content="Dapper Beard Barber Shop in Marikina: ₱300 haircuts and beard sculpting in an air-conditioned shop beside Pasta Box. Walk-ins welcome.">
+<meta property="og:image" content="images/storefront-800.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#151515">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icon-32.png">
+<link rel="apple-touch-icon" href="images/icon-180.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HairSalon","name":"Dapper Beard Barber Shop","image":"images/storefront-800.jpg","logo":"images/icon-180.png","slogan":"Cut With Intention.","telephone":"+639925600499","email":"dapper.beard.cwi@gmail.com","address":{"@type":"PostalAddress","streetAddress":"24A Mayor Gil Fernando Ave, San Roque","addressLocality":"Marikina City","addressRegion":"Metro Manila","postalCode":"1800","addressCountry":"PH"},"priceRange":"₱300","sameAs":["https://www.facebook.com/profile.php?id=61566796442975","https://www.instagram.com/dapperbeard.cwi/"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F6F4;color:#151515;-webkit-font-smoothing:antialiased}
+a{color:#3D5A73}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid #3D5A73;outline-offset:3px}
+@keyframes db-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes db-pole{from{background-position:0 0}to{background-position:0 40px}}
+@keyframes db-pulse{0%{box-shadow:0 0 0 0 rgba(122,200,140,.7)}70%{box-shadow:0 0 0 10px rgba(122,200,140,0)}100%{box-shadow:0 0 0 0 rgba(122,200,140,0)}}
+@keyframes db-cue{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(6px);opacity:1}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</helmet>
+<div ref="{{ rootRef }}" style="min-height:100vh;background:{{ backdrop }};display:flex;justify-content:center;align-items:flex-start;padding:{{ outerPad }};box-sizing:border-box">
+<div style="position:relative;width:{{ frameW }};height:{{ frameH }};border:{{ frameBorder }};border-radius:{{ frameRadius }};overflow:{{ frameOverflow }};zoom:{{ frameZoom }};box-shadow:{{ frameShadow }};background:#F6F6F4;flex:none;max-width:100%;box-sizing:content-box">
+<sc-if value="{{ phone }}" hint-placeholder-val="{{ true }}">
+<div aria-hidden="true" style="position:absolute;top:10px;left:50%;transform:translateX(-50%);width:120px;height:34px;border-radius:20px;background:#0B0B0B;z-index:30"></div>
+<div aria-hidden="true" style="position:absolute;top:0;left:0;right:0;height:52px;z-index:29;display:flex;justify-content:space-between;align-items:center;padding:4px 34px 0;font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:15px;color:{{ statusInk }};pointer-events:none;transition:color .3s">
+<span>9:41</span><span style="display:flex;gap:5px;align-items:center"><span style="width:17px;height:11px;border-radius:2px;border:1.5px solid currentColor;box-sizing:border-box;position:relative;display:block"><span style="position:absolute;inset:1.5px 4px 1.5px 1.5px;background:currentColor;border-radius:1px"></span></span></span>
+</div>
+<div aria-hidden="true" style="position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:134px;height:5px;border-radius:3px;background:#151515;z-index:30;pointer-events:none"></div>
+</sc-if>
+<div ref="{{ scrollRef }}" style="position:{{ scrollPos }};inset:0;overflow-y:{{ scrollOverflow }};overflow-x:hidden;scrollbar-width:none;font-family:'IBM Plex Sans',sans-serif;color:#151515;background:#F6F6F4;container-type:inline-size">
+
+<div style="position:sticky;top:0;z-index:20;height:{{ barH }};margin-bottom:{{ barPull }};padding-top:{{ topPad }};box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:24px;padding-left:{{ barPadX }};padding-right:{{ barPadX }};background:{{ barBg }};backdrop-filter:{{ barBlur }};-webkit-backdrop-filter:{{ barBlur }};border-bottom:1px solid {{ barLine }};transition:background .35s,border-color .35s">
+<a href="#top" onClick="{{ goTop }}" aria-label="Dapper Beard Barber Shop, back to top" style="display:block;width:38px;line-height:0">
+<img src="images/monogram-white.png" width="383" height="408" alt="" style="width:100%;height:auto;display:block;filter:{{ barLogoFilter }};transition:filter .35s">
+</a>
+<sc-if value="{{ showNav }}" hint-placeholder-val="{{ false }}">
+<nav aria-label="Sections" style="display:flex;gap:6px;margin-left:auto">
+<sc-for list="{{ navLinks }}" as="n" hint-placeholder-count="3">
+<a href="{{ n.href }}" onClick="{{ n.go }}" aria-current="{{ n.current }}" style-hover="opacity:1" style="position:relative;display:flex;align-items:center;min-height:44px;padding:0 14px;color:{{ barInk }};opacity:{{ n.op }};font-weight:500;font-size:15px;text-decoration:none;transition:color .35s,opacity .2s">{{ n.label }}<span aria-hidden="true" style="position:absolute;left:14px;right:14px;bottom:8px;height:2px;background:currentColor;transform:scaleX({{ n.bar }});transform-origin:left center;transition:transform .45s cubic-bezier(.2,.7,.2,1)"></span></a>
+</sc-for>
+</nav>
+</sc-if>
+<a href="https://www.facebook.com/profile.php?id=61566796442975" style-hover="transform:translateY(-1px)" style-active="transform:scale(.96)" style="display:flex;align-items:center;min-height:40px;padding:0 18px;border-radius:999px;background:{{ barBtnBg }};color:{{ barBtnInk }};font-weight:600;font-size:14px;text-decoration:none;transition:background .35s,color .35s,transform .15s">Message</a>
+<span ref="{{ progRef }}" aria-hidden="true" style="position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:#151515;transform:scaleX(0);transform-origin:left center;opacity:{{ progOp }};transition:opacity .35s"></span>
+</div>
+
+<header id="top" style="position:relative;min-height:{{ heroH }};display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#151515;color:#F6F6F4">
+<div ref="{{ heroParallax }}" style="position:absolute;inset:-8% 0 0 0;will-change:transform">
+<img ref="{{ heroImg }}" src="images/cutting-800.jpg" width="800" height="600" fetchpriority="high" alt="Barber cutting a client's hair at Dapper Beard Barber Shop" style="width:100%;height:100%;object-fit:cover;display:block;transform-origin:60% 40%">
+</div>
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,15,15,.55) 0%,rgba(15,15,15,.15) 30%,rgba(15,15,15,.6) 62%,rgba(15,15,15,.94) 100%)"></div>
+<div style="position:relative;max-width:1200px;width:100%;margin:0 auto;box-sizing:border-box;padding:120px 24px 40px;padding-right:{{ heroPadR }};display:flex;flex-direction:column;gap:18px">
+<div data-reveal="hero" data-delay="100" style="width:min(300px,72%);overflow:hidden;line-height:0">
+<img src="images/logo-transparent.png" width="600" height="257" alt="Dapper Beard Barber Shop logo" style="width:100%;height:auto;display:block;filter:invert(1)">
+</div>
+<span data-reveal="hero" data-delay="200" style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#D9D6D0">Cut With Intention.</span>
+<h1 data-reveal="hero" data-delay="260" style="margin:0;font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:clamp(36px,8.5cqi,96px);line-height:.98;letter-spacing:-0.03em;max-width:11em;text-wrap:balance">Dapper Beard Barber Shop</h1>
+<p data-reveal="hero" data-delay="400" style="margin:0;font-size:17px;line-height:1.5;color:#D9D6D0;max-width:30em;text-wrap:pretty">An air-conditioned barbershop in Marikina for haircuts and beard sculpting. Walk-ins welcome.</p>
+<div data-reveal="hero" data-delay="520" style="display:flex;align-items:center;gap:12px;font-size:15px">
+<span aria-hidden="true" style="width:10px;height:26px;flex:none;border-radius:5px;border:1.5px solid #F6F6F4;box-sizing:border-box;background:repeating-linear-gradient(135deg,#B8302A 0 5px,#F6F6F4 5px 10px,#2F4C86 10px 15px,#F6F6F4 15px 20px);background-size:100% 40px;animation:{{ poleAnim }}"></span>
+<span style="display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(246,246,244,.12);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)">
+<span style="width:8px;height:8px;border-radius:50%;background:{{ statusDot }};animation:{{ pulseAnim }}"></span>
+<span style="font-weight:500">{{ statusText }}</span>
+</span>
+</div>
+<div data-reveal="hero" data-delay="640" style="display:flex;flex-wrap:wrap;gap:10px;padding-top:6px">
+<a href="https://www.facebook.com/profile.php?id=61566796442975" style-hover="background:#FFFFFF" style-active="transform:scale(.97)" style="flex:1 1 200px;display:flex;align-items:center;justify-content:center;min-height:54px;padding:0 22px;background:#F6F6F4;color:#151515;font-weight:600;font-size:16px;text-decoration:none;border-radius:2px;transition:transform .15s,background .2s">Message us on Facebook</a>
+<a href="#prices" onClick="{{ goPrices }}" style-hover="background:rgba(246,246,244,.12)" style-active="transform:scale(.97)" style="flex:1 1 140px;display:flex;align-items:center;justify-content:center;min-height:54px;padding:0 22px;border:1px solid rgba(246,246,244,.7);color:#F6F6F4;font-weight:500;font-size:16px;text-decoration:none;border-radius:2px;transition:transform .15s,background .2s">See prices</a>
+</div>
+<div aria-hidden="true" data-reveal="hero" data-delay="900" style="display:flex;justify-content:center;padding-top:8px">
+<span style="width:2px;height:22px;border-radius:1px;background:#F6F6F4;animation:{{ cueAnim }}"></span>
+</div>
+</div>
+<sc-if value="{{ showNav }}" hint-placeholder-val="{{ false }}">
+<div data-reveal="hero" data-delay="820" style="position:absolute;right:{{ barPadX }};bottom:48px;width:280px;padding:22px 22px 20px;box-sizing:border-box;background:rgba(21,21,21,.55);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);border:1px solid rgba(246,246,244,.18);display:flex;flex-direction:column;gap:14px">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#B8B4AD">Walk in</span>
+<div style="display:flex;align-items:baseline;gap:10px"><span style="font-size:17px;font-weight:500">Haircut</span><span aria-hidden="true" style="flex:1;border-bottom:2px dotted rgba(246,246,244,.35);transform:translateY(-5px)"></span><span style="font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:34px;letter-spacing:-0.02em">₱300</span></div>
+<span style="font-size:14px;line-height:1.45;color:#D9D6D0">24A Mayor Gil Fernando Ave, San Roque, Marikina. Closed Tuesdays.</span>
+</div>
+</sc-if>
+</header>
+
+<div aria-hidden="true" style="background:#151515;color:#F6F6F4;border-top:1px solid #2A2927;overflow:hidden;padding:14px 0">
+<div style="display:flex;width:max-content;animation:{{ marqueeAnim }}">
+<sc-for list="{{ marqueeLoops }}" as="loop" hint-placeholder-count="2">
+<div style="display:flex;gap:28px;padding-right:28px;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap">
+<span>Haircuts</span><span style="color:#8A8780">✦</span><span>Beard sculpting</span><span style="color:#8A8780">✦</span><span>Walk-ins welcome</span><span style="color:#8A8780">✦</span><span>Air-conditioned</span><span style="color:#8A8780">✦</span><span>Marikina City</span><span style="color:#8A8780">✦</span><span>₱300 haircut</span><span style="color:#8A8780">✦</span>
+</div>
+</sc-for>
+</div>
+</div>
+
+<main>
+<section id="work" data-section="work" style="max-width:1200px;margin:0 auto;padding:52px 0 56px;display:flex;flex-direction:column;gap:18px">
+<div data-reveal="up" style="padding:0 24px;display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+<h2 style="margin:0;font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:clamp(28px,7cqi,40px);letter-spacing:-0.02em">Recent work</h2>
+<span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5E5A54">01</span>
+</div>
+<div style="padding:0 24px;display:flex;flex-wrap:wrap;gap:8px">
+<div data-reveal="zoom" ref="{{ baRef }}" style="flex:2 1 400px;aspect-ratio:4/5;position:relative;overflow:hidden;border-radius:4px;background:#151515;user-select:none;touch-action:pan-y">
+<img src="images/ba-after.jpg" width="720" height="900" loading="lazy" alt="After: client with a new cut and blond highlights, side profile" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+<div style="position:absolute;inset:0;overflow:hidden;clip-path:inset(0 {{ baRight }} 0 0)">
+<img src="images/ba-before.jpg" width="720" height="900" loading="lazy" alt="Before: the same client with long hair, side profile" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+</div>
+<div aria-hidden="true" style="position:absolute;top:0;bottom:0;left:{{ baPos }};width:2px;margin-left:-1px;background:#F6F6F4;pointer-events:none">
+<span style="position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:#F6F6F4;color:#151515;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.35)">↔</span>
+</div>
+<span aria-hidden="true" style="position:absolute;top:14px;left:14px;padding:5px 10px;background:rgba(21,21,21,.7);color:#F6F6F4;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;pointer-events:none">Before</span>
+<span aria-hidden="true" style="position:absolute;top:14px;right:14px;padding:5px 10px;background:#F6F6F4;color:#151515;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;pointer-events:none">After</span>
+<input type="range" min="0" max="100" value="{{ baVal }}" onInput="{{ onBa }}" onPointerDown="{{ stopBaAnim }}" aria-label="Compare before and after" style="position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize">
+</div>
+<div style="flex:2 1 300px;display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<div data-reveal="zoom" data-delay="0" style="min-height:320px;border-radius:4px;overflow:hidden;background:#DADDDE">
+<img src="images/work-3.jpg" width="405" height="900" loading="lazy" alt="Fade with a textured top, side profile" style-hover="transform:scale(1.05)" style="width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)">
+</div>
+<div data-reveal="zoom" data-delay="120" style="min-height:320px;border-radius:4px;overflow:hidden;background:#DADDDE">
+<img src="images/work-10.jpg" width="405" height="900" loading="lazy" alt="Barber with a client after his cut" style-hover="transform:scale(1.05)" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)">
+</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px;padding-top:28px">
+<div data-reveal="up" style="padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:12px">
+<h3 style="margin:0;font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:20px">In the shop</h3>
+<div style="display:flex;gap:8px">
+<button type="button" onClick="{{ shopPrev }}" aria-label="Previous photos" style-hover="background:#151515;color:#F6F6F4" style-active="transform:scale(.94)" style="width:44px;height:44px;border-radius:50%;border:1px solid #151515;background:transparent;color:#151515;font-size:16px;cursor:pointer;transition:background .2s,color .2s,transform .15s">←</button>
+<button type="button" onClick="{{ shopNext }}" aria-label="Next photos" style-hover="background:#151515;color:#F6F6F4" style-active="transform:scale(.94)" style="width:44px;height:44px;border-radius:50%;border:1px solid #151515;background:transparent;color:#151515;font-size:16px;cursor:pointer;transition:background .2s,color .2s,transform .15s">→</button>
+</div>
+</div>
+<div ref="{{ shopRef }}" style="display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 24px;padding:0 24px;scrollbar-width:none;scroll-behavior:smooth">
+<div data-reveal="up" style="flex:0 0 min(78%,340px);scroll-snap-align:start;aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:#DADDDE">
+<img src="images/work-7.jpg" width="675" height="900" loading="lazy" alt="Smiling client in the chair, barber giving a thumbs up" style-hover="transform:scale(1.05)" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)">
+</div>
+<div data-reveal="up" style="flex:0 0 min(78%,340px);scroll-snap-align:start;aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:#DADDDE">
+<img src="images/work-5.jpg" width="675" height="900" loading="lazy" alt="Barber trimming a client’s hair with clippers and comb" style-hover="transform:scale(1.05)" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)">
+</div>
+<div data-reveal="up" style="flex:0 0 min(78%,340px);scroll-snap-align:start;aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:#DADDDE">
+<img src="images/work-2.jpg" width="900" height="900" loading="lazy" alt="Barber trimming a client’s hairline while another client waits" style-hover="transform:scale(1.05)" style="width:100%;height:100%;object-fit:cover;object-position:30% center;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)">
+</div>
+<div data-reveal="up" style="flex:0 0 min(78%,340px);scroll-snap-align:start;aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:#DADDDE">
+<img src="images/work-6.jpg" width="675" height="900" loading="lazy" alt="Barber combing and cutting a young client’s hair" style-hover="transform:scale(1.05)" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)">
+</div>
+<div data-reveal="up" style="flex:0 0 min(78%,340px);scroll-snap-align:start;aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:#DADDDE">
+<img src="images/work-4.jpg" width="675" height="900" loading="lazy" alt="Barber cutting hair while clients wait on the bench" style-hover="transform:scale(1.05)" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)">
+</div>
+<div aria-hidden="true" style="flex:0 0 16px"></div>
+</div>
+</div>
+</section>
+
+<section id="prices" data-section="prices" aria-labelledby="prices-h" style="background:#151515;color:#F6F6F4;padding:60px 24px 56px;overflow:hidden">
+<div style="max-width:1152px;margin:0 auto;display:flex;flex-wrap:wrap;gap:30px 80px;align-items:flex-start">
+<div style="flex:1 1 280px;display:flex;flex-direction:column;gap:18px">
+<div data-reveal="up" style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+<h2 id="prices-h" style="margin:0;font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:clamp(36px,10cqi,56px);line-height:1;letter-spacing:-0.025em">Price list</h2>
+<span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8A8780">02</span>
+</div>
+<p data-reveal="up" data-delay="200" style="margin:0;font-size:15px;line-height:1.5;color:#B8B4AD">Walk-ins only. One barber, so there may be a short wait.</p>
+</div>
+<div style="flex:1.4 1 340px;display:flex;flex-direction:column;gap:24px;padding-top:8px">
+<div data-reveal="up" data-delay="120" style="display:flex;align-items:baseline;gap:10px">
+<span style="font-size:19px;font-weight:500">Haircut</span>
+<span aria-hidden="true" data-reveal="line" data-delay="350" style="flex:1;border-bottom:2px dotted #5C5A56;transform:translateY(-5px);transform-origin:left center"></span>
+<span style="font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:clamp(40px,6cqi,64px);letter-spacing:-0.02em;font-variant-numeric:tabular-nums">₱<span data-count="300">300</span></span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="visit" data-section="visit" style="max-width:1200px;margin:0 auto;padding:56px 24px;display:flex;flex-wrap:wrap;gap:28px">
+<div data-reveal="up" style="flex:1 1 300px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+<h2 style="margin:0;font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:clamp(28px,7cqi,40px);letter-spacing:-0.02em">Visit and contact</h2>
+<span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5E5A54">03</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:16px;max-width:360px">
+<span>Closed Tuesdays</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px;font-size:16px;line-height:1.45">
+<span>24A Mayor Gil Fernando Ave, San Roque, Marikina City, 1800 Metro Manila</span>
+<span style="color:#5E5A54">Beside Pasta Box, under the black awning with the "Dapper Beard Barber Shop" sign</span>
+</div>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=24A+Mayor+Gil+Fernando+Ave,+San+Roque,+Marikina" target="_blank" rel="noopener" style-hover="background:#151515;color:#F6F6F4" style-active="transform:scale(.97)" style="align-self:flex-start;display:flex;align-items:center;gap:10px;min-height:50px;padding:0 20px;border:1px solid #151515;color:#151515;font-weight:600;font-size:15px;text-decoration:none;border-radius:2px;transition:background .25s,color .25s,transform .15s">Get directions <span aria-hidden="true">→</span></a>
+<div style="display:flex;flex-direction:column;border-top:1px solid #151515;margin-top:8px">
+<sc-for list="{{ contacts }}" as="c" hint-placeholder-count="4">
+<a href="{{ c.href }}" target="{{ c.target }}" rel="noopener" style-hover="padding-left:8px;background:#EAEAE6" style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;padding:0 4px;border-bottom:1px solid #D4D2CC;color:#151515;text-decoration:none;transition:padding .25s cubic-bezier(.2,.7,.2,1),background .25s">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#5E5A54;flex:none;width:92px">{{ c.label }}</span>
+<span style="flex:1;font-size:16px;font-weight:500;overflow-wrap:anywhere">{{ c.value }}<sc-if value="{{ c.tail }}" hint-placeholder-val="{{ false }}"><wbr>{{ c.tail }}</sc-if></span>
+<span aria-hidden="true" style="color:#5E5A54">↗</span>
+</a>
+</sc-for>
+</div>
+</div>
+<div data-reveal="zoom" data-delay="120" style="flex:1.4 1 360px;min-height:300px;position:relative;background:#DADDDE;overflow:hidden">
+<img src="images/storefront-800.jpg" width="800" height="600" loading="lazy" alt="Dapper Beard Barber Shop storefront beside Pasta Box" style-hover="transform:scale(1.05)" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)">
+</div>
+</section>
+<section aria-label="Message us" style="position:relative;background:#151515;color:#F6F6F4;overflow:hidden">
+<img src="images/work-1.jpg" width="900" height="900" loading="lazy" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:.35;display:block">
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,21,21,.92) 0%,rgba(21,21,21,.55) 100%)"></div>
+<div style="position:relative;max-width:1152px;margin:0 auto;padding:96px 24px;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px">
+<h2 data-reveal="up" style="margin:0;font-family:'Familjen Grotesk',sans-serif;font-weight:600;font-size:clamp(40px,9cqi,104px);line-height:.95;letter-spacing:-0.035em">Walk in.<br>Walk out sharp.</h2>
+<a data-reveal="up" data-delay="150" href="https://www.facebook.com/profile.php?id=61566796442975" style-hover="background:#FFFFFF;transform:translateY(-2px)" style-active="transform:scale(.97)" style="flex:0 1 320px;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;padding:0 24px;background:#F6F6F4;color:#151515;font-weight:600;font-size:17px;text-decoration:none;border-radius:2px;transition:transform .2s,background .2s">Message us on Facebook <span aria-hidden="true">→</span></a>
+</div>
+</section>
+</main>
+
+<footer style="padding-bottom:{{ footPad }}">
+<div data-reveal="fade" style="max-width:1200px;margin:0 auto;padding:28px 24px 36px;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.5">
+<div style="width:150px;overflow:hidden;line-height:0">
+<img src="images/logo-transparent.png" width="600" height="257" alt="Dapper Beard Barber Shop" loading="lazy" style="width:100%;height:auto;display:block">
+</div>
+<span>24A Mayor Gil Fernando Ave, San Roque, Marikina City</span>
+<div style="display:flex;flex-wrap:wrap;gap:4px 24px"><a href="https://www.facebook.com/profile.php?id=61566796442975" style="display:flex;align-items:center;min-height:44px">Facebook</a><a href="https://www.instagram.com/dapperbeard.cwi/" style="display:flex;align-items:center;min-height:44px">Instagram</a><a href="tel:+639925600499" style="display:flex;align-items:center;min-height:44px">0992 560 0499</a><a href="mailto:dapper.beard.cwi@gmail.com" style="display:flex;align-items:center;min-height:44px">dapper.beard.cwi@gmail.com</a></div>
+</div>
+</footer>
+</div>
+
+<sc-if value="{{ showTabs }}" hint-placeholder-val="{{ true }}">
+<nav aria-label="Sections" style="position:{{ tabPos }};left:0;right:0;bottom:0;z-index:25;font-family:'IBM Plex Sans',sans-serif;padding:8px 10px {{ tabBottom }};background:rgba(246,246,244,.9);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-top:1px solid rgba(21,21,21,.1)">
+<div style="position:relative;display:grid;grid-template-columns:repeat(4,1fr);max-width:520px;margin:0 auto">
+<span aria-hidden="true" style="position:absolute;top:-8px;left:0;width:25%;height:3px;display:flex;justify-content:center;transform:translateX({{ tabX }});transition:transform .45s cubic-bezier(.3,1.3,.5,1)"><span style="width:28px;height:3px;border-radius:0 0 3px 3px;background:#151515"></span></span>
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+<a href="{{ t.href }}" onClick="{{ t.go }}" aria-current="{{ t.current }}" style-active="transform:scale(.94)" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:48px;text-decoration:none;color:{{ t.ink }};font-size:12px;font-weight:600;letter-spacing:.02em;transition:color .25s,transform .15s">
+<span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500">{{ t.num }}</span>
+<span>{{ t.label }}</span>
+</a>
+</sc-for>
+</div>
+</nav>
+</sc-if>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;frame&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Phone&quot;,&quot;Responsive&quot;],&quot;default&quot;:&quot;Responsive&quot;,&quot;tsType&quot;:&quot;'Phone'|'Responsive'&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Full&quot;,&quot;Subtle&quot;,&quot;Off&quot;],&quot;default&quot;:&quot;Full&quot;,&quot;tsType&quot;:&quot;'Full'|'Subtle'|'Off'&quot;},&quot;tabBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { ba: 50, scrolled: false, active: 'top', w: 1200, vh: window.innerHeight };
+  rootRef = React.createRef(); scrollRef = React.createRef();
+  heroImg = React.createRef(); heroParallax = React.createRef(); progRef = React.createRef(); baRef = React.createRef(); shopRef = React.createRef();
+
+  isPhone() { return (this.props.frame ?? 'Responsive') === 'Phone'; }
+  motion() { return this.props.motion ?? 'Full'; }
+
+  componentDidMount() {
+    this.ro = new ResizeObserver(() => { const el = this.scrollRef.current; this.setState({ w: el ? el.clientWidth : this.state.w, vh: document.documentElement.clientHeight || window.innerHeight }); });
+    this.ro.observe(this.rootRef.current); this.ro.observe(document.documentElement);
+    this.onWin = () => this.setState({ vh: window.innerHeight }); window.addEventListener('resize', this.onWin);
+    this.setup();
+  }
+  componentDidUpdate(p) {
+    if (p.frame !== this.props.frame || p.motion !== this.props.motion) { this.teardown(); setTimeout(() => this.setup(), 30); }
+  }
+  componentWillUnmount() { this.teardown(); this.ro && this.ro.disconnect(); window.removeEventListener('resize', this.onWin); }
+
+  scroller() { return this.isPhone() ? this.scrollRef.current : window; }
+  scrollTop() { const s = this.scroller(); return s === window ? window.scrollY : s.scrollTop; }
+
+  teardown() {
+    this.io && this.io.disconnect(); this.baIO && this.baIO.disconnect(); this.secIO && this.secIO.disconnect();
+    if (this.onScroll) { (this.lastScroller || window).removeEventListener('scroll', this.onScroll); }
+    this.kb && this.kb.cancel();
+  }
+
+  setup() {
+    const root = this.scrollRef.current; if (!root) return;
+    const m = this.motion(), phone = this.isPhone();
+    const ioRoot = phone ? root : null;
+    const ease = 'cubic-bezier(.2,.7,.2,1)';
+    const els = [...root.querySelectorAll('[data-reveal]')];
+    const show = (el) => {
+      const d = +(el.dataset.delay || 0);
+      el.style.transitionDelay = d + 'ms';
+      el.style.opacity = '1';
+      el.style.transform = el.dataset.reveal === 'line' ? 'translateY(-5px) scaleX(1)' : 'none';
+      const c = el.querySelector('[data-count]');
+      if (c && m !== 'Off') this.countUp(c, d + 150);
+    };
+    els.forEach(el => {
+      const k = el.dataset.reveal;
+      if (m === 'Off') { el.style.opacity = ''; el.style.transform = k === 'line' ? 'translateY(-5px)' : ''; el.style.transition = ''; return; }
+      const dist = m === 'Subtle' ? 0 : 1;
+      el.style.transition = `opacity .8s ${ease}, transform ${k === 'line' ? 1.1 : .9}s ${ease}`;
+      el.style.transitionDelay = '0ms';
+      el.style.opacity = k === 'line' ? '1' : '0';
+      el.style.transform = k === 'line' ? 'translateY(-5px) scaleX(0)'
+        : k === 'zoom' ? (dist ? 'scale(.94) translateY(24px)' : 'none')
+        : k === 'fade' ? 'none'
+        : (dist ? 'translateY(28px)' : 'none');
+    });
+    if (m === 'Off') return;
+    void root.offsetHeight;
+    requestAnimationFrame(() => els.filter(e => e.dataset.reveal === 'hero').forEach(show));
+    this.io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { show(e.target); this.io.unobserve(e.target); } }),
+      { root: ioRoot, threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.filter(e => e.dataset.reveal !== 'hero').forEach(e => this.io.observe(e));
+
+    const ba = this.baRef.current;
+    if (ba && m === 'Full') {
+      this.baIO = new IntersectionObserver(es => { if (es[0].isIntersecting) { this.baIO.disconnect(); setTimeout(() => this.sweepBa(), 500); } }, { root: ioRoot, threshold: 0.5 });
+      this.baIO.observe(ba);
+    }
+    const img = this.heroImg.current, par = this.heroParallax.current;
+    if (img && m === 'Full') this.kb = img.animate([{ transform: 'scale(1.18)' }, { transform: 'scale(1.02)' }], { duration: 2600, easing: ease, fill: 'forwards' });
+
+    const s = this.scroller(); this.lastScroller = s;
+    this.onScroll = () => {
+      const y = this.scrollTop();
+      if (par && m === 'Full') par.style.transform = `translate3d(0,${Math.min(y, 900) * 0.35}px,0)`;
+      const pr = this.progRef.current;
+      if (pr) { const s2 = this.scroller(); const max = s2 === window ? document.documentElement.scrollHeight - window.innerHeight : s2.scrollHeight - s2.clientHeight; pr.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')'; }
+      const sc = y > 40;
+      if (sc !== this.state.scrolled) this.setState({ scrolled: sc });
+    };
+    s.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+
+    this.secIO = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) this.setState({ active: e.target.dataset.section || 'top' }); });
+    }, { root: ioRoot, rootMargin: '-45% 0px -50% 0px' });
+    root.querySelectorAll('#top,[data-section]').forEach(el => this.secIO.observe(el));
+  }
+
+  sweepBa() {
+    const keys = [[0, 50], [700, 18], [1600, 82], [2400, 50]], t0 = performance.now();
+    const ez = p => p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+    const step = (t) => {
+      if (this.baStop) return;
+      const e = t - t0; const i = keys.findIndex(k => k[0] > e);
+      if (i === -1) { this.setState({ ba: 50 }); return; }
+      const [ta, va] = keys[i - 1], [tb, vb] = keys[i];
+      this.setState({ ba: Math.round(va + (vb - va) * ez((e - ta) / (tb - ta))) });
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  countUp(el, delay) {
+    if (el.dataset.done) return; el.dataset.done = '1';
+    const to = +el.dataset.count, t0 = performance.now() + delay, dur = 900;
+    el.textContent = '0';
+    const step = (t) => {
+      const p = Math.min(1, Math.max(0, (t - t0) / dur)), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(to * e);
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  go(id) {
+    return (ev) => {
+      ev.preventDefault();
+      const root = this.scrollRef.current, el = root && root.querySelector('#' + id); if (!el) return;
+      const off = id === 'top' ? 0 : 60 + (this.isPhone() ? 44 : 0) - 1;
+      if (this.isPhone()) root.scrollTo({ top: id === 'top' ? 0 : el.offsetTop - off, behavior: 'smooth' });
+      else window.scrollTo({ top: id === 'top' ? 0 : el.getBoundingClientRect().top + window.scrollY - off, behavior: 'smooth' });
+    };
+  }
+
+  renderVals() {
+    const phone = this.isPhone(), m = this.motion();
+    const narrow = phone || this.state.w < 760;
+    const showTabs = (this.props.tabBar ?? true) && narrow;
+    const sc = this.state.scrolled;
+    const tue = new Date().getDay() === 2;
+    const tabDefs = [['top', 'Home'], ['work', 'Work'], ['prices', 'Prices'], ['visit', 'Visit']];
+    const ai = Math.max(0, tabDefs.findIndex(t => t[0] === this.state.active));
+    return {
+      shopRef: this.shopRef,
+      shopPrev: () => { const s = this.shopRef.current; s && s.scrollBy({ left: -Math.min(360, s.clientWidth * .8), behavior: 'smooth' }); },
+      shopNext: () => { const s = this.shopRef.current; s && s.scrollBy({ left: Math.min(360, s.clientWidth * .8), behavior: 'smooth' }); },
+      baRef: this.baRef, baVal: this.state.ba, baPos: this.state.ba + '%', baRight: (100 - this.state.ba) + '%',
+      onBa: (e) => { this.baStop = true; this.setState({ ba: +e.target.value }); }, stopBaAnim: () => { this.baStop = true; },
+      progRef: this.progRef, rootRef: this.rootRef, scrollRef: this.scrollRef, heroImg: this.heroImg, heroParallax: this.heroParallax,
+      phone,
+      backdrop: phone ? '#E4E2DD' : '#F6F6F4',
+      outerPad: phone ? '20px 16px' : '0',
+      frameW: phone ? '390px' : '100%', frameH: phone ? '844px' : 'auto',
+      frameBorder: phone ? '12px solid #111' : '0', frameRadius: phone ? '56px' : '0',
+      frameOverflow: phone ? 'hidden' : 'visible',
+      frameZoom: String(phone ? Math.max(0.4, Math.min(1, (this.state.vh - 40) / 868)).toFixed(3) : 1),
+      frameShadow: phone ? '0 40px 80px -30px rgba(0,0,0,.45), 0 0 0 1px #2a2a2a' : 'none',
+      scrollPos: phone ? 'absolute' : 'relative', scrollOverflow: phone ? 'auto' : 'visible',
+      statusInk: sc ? '#151515' : '#F6F6F4',
+      topPad: phone ? '44px' : '0', barH: phone ? '104px' : '64px', barPull: phone ? '-104px' : '-64px',
+      barBg: sc ? 'rgba(246,246,244,.88)' : 'rgba(246,246,244,0)',
+      barBlur: sc ? 'saturate(1.4) blur(14px)' : 'none',
+      barLine: sc ? 'rgba(21,21,21,.1)' : 'transparent',
+      barLogoFilter: sc ? 'invert(1)' : 'none',
+      barBtnBg: sc ? '#151515' : 'rgba(246,246,244,.16)', barBtnInk: '#F6F6F4',
+      showNav: !narrow,
+      contacts: [
+        { label: 'Phone', value: '0992 560 0499', href: 'tel:+639925600499', target: '_self' },
+        { label: 'Email', value: 'dapper.beard.cwi', tail: '@gmail.com', href: 'mailto:dapper.beard.cwi@gmail.com', target: '_self' },
+        { label: 'Messenger', value: 'Dapper Beard - Marikina', href: 'https://m.me/61566796442975', target: '_blank' },
+        { label: 'Instagram', value: '@dapperbeard.cwi', href: 'https://www.instagram.com/dapperbeard.cwi/', target: '_blank' },
+        { label: 'Facebook', value: 'Dapper Beard - Marikina', href: 'https://www.facebook.com/profile.php?id=61566796442975', target: '_blank' }
+      ],
+      barPadX: narrow ? '20px' : 'max(24px, calc((100% - 1152px) / 2))',
+      barInk: sc ? '#151515' : '#F6F6F4', progOp: sc ? 1 : 0,
+      heroPadR: narrow ? '24px' : '340px',
+      navLinks: tabDefs.slice(1).map(([id, label], i) => ({ href: '#' + id, label, go: this.go(id), current: id === this.state.active ? 'true' : undefined, op: id === this.state.active ? 1 : 0.75, bar: id === this.state.active ? 1 : 0 })),
+      heroH: phone ? '720px' : 'min(88vh, 820px)',
+      statusText: tue ? 'Closed today · Back Wednesday' : 'Open today · Closed Tuesdays',
+      statusDot: tue ? '#E0705F' : '#7AC88C',
+      pulseAnim: m === 'Off' || tue ? 'none' : 'db-pulse 2s infinite',
+      poleAnim: m === 'Off' ? 'none' : 'db-pole 1.6s linear infinite',
+      cueAnim: m === 'Off' ? 'none' : 'db-cue 1.8s ease-in-out infinite',
+      marqueeAnim: m === 'Off' ? 'none' : `db-marquee ${m === 'Subtle' ? 60 : 32}s linear infinite`,
+      marqueeLoops: [0, 1],
+      goTop: this.go('top'), goPrices: this.go('prices'),
+      showTabs, tabPos: phone ? 'absolute' : 'fixed', tabBottom: phone ? '24px' : 'max(10px, env(safe-area-inset-bottom))',
+      footPad: showTabs ? (phone ? '92px' : '76px') : '0',
+      tabX: ai * 100 + '%',
+      tabs: tabDefs.map(([id, label], i) => ({
+        href: '#' + id, label, num: '0' + i, go: this.go(id),
+        current: i === ai ? 'true' : undefined, ink: i === ai ? '#151515' : '#6E6A63'
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>
