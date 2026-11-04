@@ -29,6 +29,13 @@ body{margin:0;background:#F6F6F4;color:#151515;-webkit-font-smoothing:antialiase
 a{color:#3D5A73}
 a:hover{text-decoration-thickness:2px}
 :focus-visible{outline:3px solid #3D5A73;outline-offset:3px}
+/* Keyboard access: a light focus ring where the page is dark (the blue ring is 2.5:1 there), a skip link,
+   and scroll padding so focused items never sit under the top bar or the phone tab bar. */
+.hero :focus-visible,.cta :focus-visible,.bar:not(.is-scrolled) :focus-visible,.skip:focus-visible{outline-color:#F6F6F4}
+[tabindex="-1"]:focus{outline:none}
+html{scroll-padding-top:72px;scroll-padding-bottom:calc(65px + max(10px,env(safe-area-inset-bottom)))}
+.skip{position:fixed;left:20px;top:-80px;z-index:30;display:flex;align-items:center;min-height:40px;padding:0 18px;border-radius:999px;background:#151515;color:#F6F6F4;font:600 14px 'IBM Plex Sans',sans-serif;text-decoration:none}
+.skip:focus{top:12px}
 picture{display:contents}
 
 @keyframes db-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -203,6 +210,7 @@ picture{display:contents}
   .walkin{display:flex}
   .foot{padding-bottom:0}
   .tabs{display:none}
+  html{scroll-padding-bottom:0}
 }
 
 /* Smooth scrolling for the photo carousel */
@@ -218,6 +226,7 @@ picture{display:contents}
 <script src="script.js" defer></script>
 </head>
 <body>
+<a class="skip" href="#top">Skip to content</a>
 <div class="page">
 
 <div class="bar">
