@@ -15,12 +15,15 @@
     pill.classList.add(closed ? 'is-closed' : 'is-open');
   }
 
-  // Smooth scrolling to sections, stopping just under the top bar.
+  // Smooth scrolling to sections, stopping just under the top bar. Focus follows,
+  // so the next Tab continues from the section rather than from the menu.
   function goTo(id) {
     var el = document.getElementById(id);
     if (!el) return;
     var top = id === 'top' ? 0 : el.getBoundingClientRect().top + window.scrollY - 59;
     window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
+    if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+    el.focus({ preventScroll: true });
   }
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href^="#"]');
